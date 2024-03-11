@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Seller Registration</title>
+        <link rel="stylesheet" type="text/css" href="style.css">
+        <script>
+            function validate() {
+                for (const id of ['name', 'phone', 'address']) {
+                    if (!document.getElementById(id).value.trim()) {
+                        alert('Please fill in all fields.');
+                        return false;
+                    }
+                }
+                return true;
+            }
+        </script>
+    </head>
+    <body>
+        <header>
+            <h1>E-Commerce Company</h1>
+        </header>
+        <nav>
+            <a href="index.html">Home</a> | 
+            <a href="items.html">Items</a> | 
+            <a href="seller_registration.html">Seller Registration</a> | 
+            <a href="feedback.html">Feedback</a>
+        </nav>
+        <div>
+            <h2>Seller Registration</h2>
+            <form onsubmit="return validate()">
+                <label for="name">Name:</label><br>
+                <input type="text" id="name" name="name"><br>
+                <label for="phone">Phone Number:</label><br>
+                <input type="text" id="phone" name="phone"><br>
+                <label for="address">Address:</label><br>
+                <input type="text" id="address" name="address"><br><br>
+                <input type="submit" value="Submit">
+            </form>
+        </div>
+    </body>
+</html>
